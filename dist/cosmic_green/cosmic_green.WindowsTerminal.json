@@ -1,0 +1,26 @@
+{
+    "name": "Cosmic Green",
+
+    "foreground": "#F1F1F1",
+    "background": "#121212",
+    "cursorColor": "#F1F1F1",
+    "selectionBackground": "#F1F1F1",
+
+    "brightBlack": "#626262",
+    "brightBlue": "#1CC51C",
+    "brightCyan": "#008600",
+    "brightGreen": "#00AE00",
+    "brightPurple": "#008F00",
+    "brightRed": "#008B00",
+    "brightWhite": "#FFFFFF",
+    "brightYellow": "#006700",
+
+    "black": "#121212",
+    "blue": "#00B300",
+    "cyan": "#005800",
+    "green": "#008D00",
+    "purple": "#006600",
+    "red": "#004C00",
+    "white": "#F1F1F1",
+    "yellow": "#004C00"
+}

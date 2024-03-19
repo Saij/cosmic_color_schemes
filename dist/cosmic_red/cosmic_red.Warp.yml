@@ -1,0 +1,26 @@
+accent: '#F14040' # Accent color for UI elements
+background: '#121212' # Terminal background color
+details: darker # Whether the theme is lighter or darker.
+foreground: '#F1F1F1' # The foreground color.
+background_image:
+    path: cosmic_red.jpg
+opacity: 30
+terminal_colors: # Ansi escape colors.
+bright:
+    black: '#626262'
+    blue: '#FF8686'
+    cyan: '#EB3B3B'
+    green: '#FF6666'
+    magenta: '#F64343'
+    red: '#F14040'
+    white: '#FFFFFF'
+    yellow: '#C12424'
+normal:
+    black: '#121212'
+    blue: '#FF6C6C'
+    cyan: '#AA1B1B'
+    green: '#F34141'
+    magenta: '#C02323'
+    red: '#971515'
+    white: '#F1F1F1'
+    yellow: '#971515'

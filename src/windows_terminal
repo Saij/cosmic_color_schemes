@@ -1,0 +1,32 @@
+function generate_windows_terminal() {
+    DEST_FILE="$1"
+
+    cat <<EOF > "${DEST_FILE}"
+{
+    "name": "${NAME}",
+
+    "foreground": "#${WHITE}",
+    "background": "#${BLACK}",
+    "cursorColor": "#${WHITE}",
+    "selectionBackground": "#${WHITE}",
+
+    "brightBlack": "#${BRIGHT_BLACK}",
+    "brightBlue": "#${BRIGHT_BLUE}",
+    "brightCyan": "#${BRIGHT_CYAN}",
+    "brightGreen": "#${BRIGHT_GREEN}",
+    "brightPurple": "#${BRIGHT_MAGENTA}",
+    "brightRed": "#${BRIGHT_RED}",
+    "brightWhite": "#${BRIGHT_WHITE}",
+    "brightYellow": "#${BRIGHT_YELLOW}",
+
+    "black": "#${BLACK}",
+    "blue": "#${BLUE}",
+    "cyan": "#${CYAN}",
+    "green": "#${GREEN}",
+    "purple": "#${MAGENTA}",
+    "red": "#${RED}",
+    "white": "#${WHITE}",
+    "yellow": "#${YELLOW}"
+}
+EOF
+}

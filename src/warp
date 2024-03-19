@@ -1,0 +1,32 @@
+function generate_warp() {
+    DEST_FILE="$1"
+
+    cat <<EOF > "${DEST_FILE}"
+accent: '#${BRIGHT_RED}' # Accent color for UI elements
+background: '#${BLACK}' # Terminal background color
+details: darker # Whether the theme is lighter or darker.
+foreground: '#${WHITE}' # The foreground color.
+background_image:
+    path: ${SCHEME}.jpg
+opacity: ${BG_OPACITY}
+terminal_colors: # Ansi escape colors.
+bright:
+    black: '#${BRIGHT_BLACK}'
+    blue: '#${BRIGHT_BLUE}'
+    cyan: '#${BRIGHT_CYAN}'
+    green: '#${BRIGHT_GREEN}'
+    magenta: '#${BRIGHT_MAGENTA}'
+    red: '#${BRIGHT_RED}'
+    white: '#${BRIGHT_WHITE}'
+    yellow: '#${BRIGHT_YELLOW}'
+normal:
+    black: '#${BLACK}'
+    blue: '#${BLUE}'
+    cyan: '#${CYAN}'
+    green: '#${GREEN}'
+    magenta: '#${MAGENTA}'
+    red: '#${RED}'
+    white: '#${WHITE}'
+    yellow: '#${YELLOW}'
+EOF
+}

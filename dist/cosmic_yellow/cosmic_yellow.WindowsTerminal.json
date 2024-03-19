@@ -1,0 +1,26 @@
+{
+    "name": "Cosmic Yellow",
+
+    "foreground": "#F1F1F1",
+    "background": "#121212",
+    "cursorColor": "#F1F1F1",
+    "selectionBackground": "#F1F1F1",
+
+    "brightBlack": "#626262",
+    "brightBlue": "#C3C300",
+    "brightCyan": "#838300",
+    "brightGreen": "#ABAB00",
+    "brightPurple": "#8C8C00",
+    "brightRed": "#888800",
+    "brightWhite": "#FFFFFF",
+    "brightYellow": "#646400",
+
+    "black": "#121212",
+    "blue": "#B0B000",
+    "cyan": "#555500",
+    "green": "#8A8A00",
+    "purple": "#636300",
+    "red": "#4A4A00",
+    "white": "#F1F1F1",
+    "yellow": "#4A4A00"
+}

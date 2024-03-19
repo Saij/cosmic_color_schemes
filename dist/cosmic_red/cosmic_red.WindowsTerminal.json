@@ -1,0 +1,26 @@
+{
+    "name": "Cosmic Red",
+
+    "foreground": "#F1F1F1",
+    "background": "#121212",
+    "cursorColor": "#F1F1F1",
+    "selectionBackground": "#F1F1F1",
+
+    "brightBlack": "#626262",
+    "brightBlue": "#FF8686",
+    "brightCyan": "#EB3B3B",
+    "brightGreen": "#FF6666",
+    "brightPurple": "#F64343",
+    "brightRed": "#F14040",
+    "brightWhite": "#FFFFFF",
+    "brightYellow": "#C12424",
+
+    "black": "#121212",
+    "blue": "#FF6C6C",
+    "cyan": "#AA1B1B",
+    "green": "#F34141",
+    "purple": "#C02323",
+    "red": "#971515",
+    "white": "#F1F1F1",
+    "yellow": "#971515"
+}

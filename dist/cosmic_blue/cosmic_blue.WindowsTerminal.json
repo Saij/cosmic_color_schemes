@@ -1,0 +1,26 @@
+{
+    "name": "Cosmic Blue",
+
+    "foreground": "#F1F1F1",
+    "background": "#121212",
+    "cursorColor": "#F1F1F1",
+    "selectionBackground": "#F1F1F1",
+
+    "brightBlack": "#626262",
+    "brightBlue": "#A4A4FF",
+    "brightCyan": "#5E5EFF",
+    "brightGreen": "#8888FF",
+    "brightPurple": "#6767FF",
+    "brightRed": "#6363FF",
+    "brightWhite": "#FFFFFF",
+    "brightYellow": "#4343E1",
+
+    "black": "#121212",
+    "blue": "#8D8DFF",
+    "cyan": "#3838C7",
+    "green": "#6565FF",
+    "purple": "#4242DF",
+    "red": "#2F2FB1",
+    "white": "#F1F1F1",
+    "yellow": "#2F2FB1"
+}

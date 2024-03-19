@@ -1,0 +1,175 @@
+function _convert_to_real() {
+    awk "BEGIN {print $1 / 255}"
+}
+
+function _get_red_value() {
+    VAL=$(printf "%d" 0x${1:0:2})
+    _convert_to_real $VAL
+}
+
+function _get_green_value() {
+    VAL=$(printf "%d" 0x${1:2:2})
+    _convert_to_real $VAL
+}
+
+function _get_blue_value() {
+    VAL=$(printf "%d" 0x${1:4:2})
+    _convert_to_real $VAL
+}
+
+function generate_iterm2() {
+    DEST_FILE="$1"
+
+    cat <<EOF > "${DEST_FILE}"
+<?xml version="1.0"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Ansi 0 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${BLACK}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${BLACK}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${BLACK}")</real>
+    </dict>
+    <key>Ansi 1 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${RED}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${RED}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${RED}")</real>
+    </dict>
+    <key>Ansi 2 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${GREEN}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${GREEN}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${GREEN}")</real>
+    </dict>
+    <key>Ansi 3 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${YELLOW}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${YELLOW}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${YELLOW}")</real>
+    </dict>
+    <key>Ansi 4 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${BLUE}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${BLUE}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${BLUE}")</real>
+    </dict>
+    <key>Ansi 5 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${MAGENTA}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${MAGENTA}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${MAGENTA}")</real>
+    </dict>
+    <key>Ansi 6 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${CYAN}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${CYAN}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${CYAN}")</real>
+    </dict>
+    <key>Ansi 7 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${WHITE}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${WHITE}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${WHITE}")</real>
+    </dict>
+    <key>Ansi 8 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${BRIGHT_BLACK}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${BRIGHT_BLACK}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${BRIGHT_BLACK}")</real>
+    </dict>
+    <key>Ansi 9 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${BRIGHT_RED}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${BRIGHT_RED}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${BRIGHT_RED}")</real>
+    </dict>
+    <key>Ansi 10 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${BRIGHT_GREEN}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${BRIGHT_GREEN}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${BRIGHT_GREEN}")</real>
+    </dict>
+    <key>Ansi 11 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${BRIGHT_YELLOW}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${BRIGHT_YELLOW}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${BRIGHT_YELLOW}")</real>
+    </dict>
+    <key>Ansi 12 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${BRIGHT_BLUE}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${BRIGHT_BLUE}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${BRIGHT_BLUE}")</real>
+    </dict>
+    <key>Ansi 13 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${BRIGHT_MAGENTA}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${BRIGHT_MAGENTA}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${BRIGHT_MAGENTA}")</real>
+    </dict>
+    <key>Ansi 14 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${BRIGHT_CYAN}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${BRIGHT_CYAN}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${BRIGHT_CYAN}")</real>
+    </dict>
+    <key>Ansi 15 Color</key>
+    <dict>
+        <key>Blue Component</key>
+        <real>$(_get_blue_value "${BRIGHT_WHITE}")</real>
+        <key>Green Component</key>
+        <real>$(_get_green_value "${BRIGHT_WHITE}")</real>
+        <key>Red Component</key>
+        <real>$(_get_red_value "${BRIGHT_WHITE}")</real>
+    </dict>
+</dict>
+</plist>
+EOF
+}
